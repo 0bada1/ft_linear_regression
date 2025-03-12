@@ -1,0 +1,26 @@
+**ft_linear_regression Notes**
+
+* Formulas
+- Linear Regression - fw,b(x) = wx + b
+
+											   m-1
+- Squared Error Cost Function - J(w,b) = (1/2m) ∑ (fw,b(x[i]) - y[i])^2
+											   i=0
+
+- Gradient Descent -
+													m-1
+For w: w - α (∂/∂w J(w,b)) where ∂/∂w J(w,b) = (1/m) ∑ (fw,b(x[i]) - y[i]) * x[i]
+													i=0
+
+													m-1
+For b: b - α (∂/∂b J(w,b)) where ∂/∂b J(w,b) = (1/m) ∑ (fw,b(x[i]) - y[i])
+													i=0
+α (alpha) = learning rate
+
+* To do
+1. Fix diverging cost bug (DONE)
+2. Create all graphs (NOT DONE)
+3. Create program to predict prices based on model wb values (NOT DONE)
+4. Use oop for both programs (NOT DONE)
+5. Finish README.md file (NOT DONE)
+6. Prepare for evaluation (NOT DONE)

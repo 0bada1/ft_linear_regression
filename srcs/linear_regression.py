@@ -11,5 +11,5 @@ def linear_regression(w: float, b: float, x: float) -> float:
 	float
 	f_wb = w * x + b
 	'''
-	f_wb = w*x + b
+	f_wb = w * x + b
 	return f_wb

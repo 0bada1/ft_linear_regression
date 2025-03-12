@@ -20,6 +20,7 @@ def squared_error_cost(m: int, w: float, b: float, x: list[int | float], y: list
 	cost = 0
 	# m = len(arr)
 	for i in range(m):
-		cost += (linear_regression(w, b, x[i]) - y[i])**2
+		f_wb = linear_regression(w, b, x[i])
+		cost += (f_wb - y[i])**2
 	total_cost = (1/(2*m)) * cost
 	return total_cost

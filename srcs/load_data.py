@@ -4,7 +4,7 @@ import os
 
 def load_data(path: str) -> np.ndarray:
     '''
-    Loads csv file to be read by the machine learning model after
+    Loads csv file to be read by the machine learning model
 
     Args:
     path: (str) - Path to the csv file

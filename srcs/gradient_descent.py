@@ -60,14 +60,14 @@ def gradient_descent(x: list[float | int], y: list[int | float], m: int, alpha: 
 		# Simultaneous update of w (theta 0) and b (thetha 1)
 		# tmp_w = w - alpha * ((1/m)*(linear_regression(w, b, y[i]) - y[i]) * x[i])  # w - α (∂/∂w J(w,b))
 		# tmp_b = b - alpha * ((1/m)*(linear_regression(w, b, y[i]) - y[i]))  # b - α (∂/∂b J(w,b))
-		w = w - alpha * df_dw  # w - α (∂/∂w J(w,b))
-		b = b - alpha * df_db  # b - α (∂/∂b J(w,b))
+		w = w - alpha * df_dw  # w = w - α (∂/∂w J(w,b))
+		b = b - alpha * df_db  # b = b - α (∂/∂b J(w,b))
 		if i < 10000:  # Prevent resource exauhstion
 			cost_history.append(squared_error_cost(m, w, b, x, y))
 			wb_history.append([w, b])
 		if i <= iterations:  # Print cost every iteration
 		# if i % math.ceil(iterations/10) == 0:  # Print cost every 10 iterations
-			print(f"Iteration: {i}: Cost: {cost_history[-1]:0.2e} ",
+			print(f"Iteration: {i:4}: Cost: {cost_history[-1]:0.2e} ",
 		 		  f"df_dw: {df_dw: 0.3e}, df_db: {df_db: 0.3e} ",
 				  f"w: {w: 0.3e}, b: {b: 0.5e}")
 	return w, b, cost_history, wb_history
