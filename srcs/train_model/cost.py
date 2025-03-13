@@ -1,4 +1,3 @@
-import numpy as np
 from linear_regression import linear_regression
 
 def squared_error_cost(m: int, w: float, b: float, x: list[int | float], y: list[int | float]) -> float:

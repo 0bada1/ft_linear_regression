@@ -2,14 +2,24 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def cost_w_b_3D_graph(mileage_data, price_data, cost_history):
+def cost_w_b_3D_graph(wb_history, cost_history):
 	'''Cost and w (theta0) and b (theta1) 3D graph'''
 	pass
 
 
-def cost_w_graph(cost_history, w_history):
+def cost_w_graph(cost_history, wb_history, iterations):
 	'''Cost and w (theta0) 2D graph'''
-	pass
+	# Get w from wb_history
+	w_history = [w[0] for w in wb_history]
+	print(w_history)
+
+	# Create new graph	
+	plt.figure()
+
+	# Graph cost and w
+	plt.plot(w_history, cost_history)
+	plt.title("Cost on w (theta 0)")
+	plt.xlabel("w (theta 0)"); plt.ylabel("Cost (USD)")
 
 
 def cost_iteration_graph(cost_history, iterations):
@@ -22,10 +32,10 @@ def cost_iteration_graph(cost_history, iterations):
 	ax1.set_ylabel("Cost"); ax2.set_ylabel("Cost")
 
 
-
 def scatter_data_graph(mileage_data, price_data):
 	'''Price and mileage raw data scatter graph'''
-	plt.scatter(price_data, mileage_data, color='blue', marker="x")
+	plt.figure()
+	plt.scatter(price_data, mileage_data, color='blue', marker="x", label="Data points")
 	plt.xlabel("Mileage (km)")
 	plt.ylabel("Price (USD)")
 	plt.title("Car Price Based on Mileage")
@@ -34,6 +44,7 @@ def scatter_data_graph(mileage_data, price_data):
 
 def model_fit_on_data_graph(mileage_data, price_data, w, b):
 	'''Linear regression fit on price and mileage scatter graph'''
+	plt.figure()
 	# Your dataset (after scaling)
 	x_scaled = np.array(price_data)  # Scaled x-values (e.g., car price)
 	y_scaled = np.array(mileage_data)  # Scaled y-values (e.g., mileage)
@@ -60,7 +71,7 @@ def wb_contour_graph(w, b):
 
 def make_graphs(mileage_data, price_data, cost_history, wb_history, w, b, iterations):
 	'''Call all graph functions from here'''
-	# scatter_data_graph(mileage_data, price_data)
+	scatter_data_graph(mileage_data, price_data)
 	model_fit_on_data_graph(mileage_data, price_data, w, b)
 	cost_iteration_graph(cost_history, iterations)
 	plt.show()

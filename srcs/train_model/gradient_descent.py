@@ -65,8 +65,8 @@ def gradient_descent(x: list[float | int], y: list[int | float], m: int, alpha: 
 		if i < 10000:  # Prevent resource exauhstion
 			cost_history.append(squared_error_cost(m, w, b, x, y))
 			wb_history.append([w, b])
-		if i <= iterations:  # Print cost every iteration
-		# if i % math.ceil(iterations/10) == 0:  # Print cost every 10 iterations
+		# if i <= iterations:  # Print cost every iteration
+		if i % math.ceil(iterations/10) == 0:  # Print cost every 1000 iterations
 			print(f"Iteration: {i:4}: Cost: {cost_history[-1]:0.2e} ",
 		 		  f"df_dw: {df_dw: 0.3e}, df_db: {df_db: 0.3e} ",
 				  f"w: {w: 0.3e}, b: {b: 0.5e}")
