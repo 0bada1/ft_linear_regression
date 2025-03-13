@@ -20,7 +20,7 @@ For b: b - α (∂/∂b J(w,b)) where ∂/∂b J(w,b) = (1/m) ∑ (fw,b(x[i]) - 
 * To do
 1. Fix diverging cost bug (DONE)
 2. Create all graphs (NOT DONE)
-3. Create program to predict prices based on model wb values (NOT DONE)
+3. Create program to predict prices based on model wb values (DONE)
 4. Use oop for both programs (NOT DONE)
 5. Test all programs on different data (NOT DONE)
 6. Finish README.md file (NOT DONE)
