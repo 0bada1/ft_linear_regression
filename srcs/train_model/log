@@ -55,15 +55,14 @@ alpha(learning rate): 0.01
 w: 0
 b: 0
 iterations: 10000
-Price[23]: 8290
-Iteration:    0: Cost: 8.35e-01  df_dw:  8.561e-01, df_db: -1.000e+00  w: -8.561e-02, b: -9.00000e-01
-Iteration: 1000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 2000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 3000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 4000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 5000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 6000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 7000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 8000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-Iteration: 9000: Cost: 1.34e-01  df_dw:  5.042e-16, df_db:  0.000e+00  w: -8.561e-01, b:  1.95076e-16
-w: -0.021448963591702286, b: 8499.599649933214
+Iteration:    0: Cost: 4.93e-01  df_dw:  8.561e-01, df_db:  2.313e-17  w: -8.561e-03, b: -2.31296e-19
+Iteration: 1000: Cost: 1.34e-01  df_dw:  3.696e-05, df_db: -4.626e-18  w: -8.561e-01, b:  1.94035e-16
+Iteration: 2000: Cost: 1.34e-01  df_dw:  1.596e-09, df_db:  1.388e-17  w: -8.561e-01, b:  1.94173e-16
+Iteration: 3000: Cost: 1.34e-01  df_dw:  6.886e-14, df_db: -9.252e-18  w: -8.561e-01, b:  1.94266e-16
+Iteration: 4000: Cost: 1.34e-01  df_dw:  5.514e-15, df_db: -4.626e-18  w: -8.561e-01, b:  1.94266e-16
+Iteration: 5000: Cost: 1.34e-01  df_dw:  5.514e-15, df_db: -4.626e-18  w: -8.561e-01, b:  1.94266e-16
+Iteration: 6000: Cost: 1.34e-01  df_dw:  5.514e-15, df_db: -4.626e-18  w: -8.561e-01, b:  1.94266e-16
+Iteration: 7000: Cost: 1.34e-01  df_dw:  5.514e-15, df_db: -4.626e-18  w: -8.561e-01, b:  1.94266e-16
+Iteration: 8000: Cost: 1.34e-01  df_dw:  5.514e-15, df_db: -4.626e-18  w: -8.561e-01, b:  1.94266e-16
+Iteration: 9000: Cost: 1.34e-01  df_dw:  5.514e-15, df_db: -4.626e-18  w: -8.561e-01, b:  1.94266e-16
+w: -0.02144896359170216, b: 8499.599649933201

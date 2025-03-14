@@ -6,10 +6,10 @@ import numpy as np
 def linear_regression(w: float, b: float, x: float) -> float:
     '''Linear Regression
     Fw,b(x) = wx + b
-    
+
     Args:
-    w: (float) - Slope in Fw,b(x) = wx + b 
-    b: (float) - Y intercept in Fw,b(x) = wx + b 
+    w: (float) - Slope in Fw,b(x) = wx + b
+    b: (float) - Y intercept in Fw,b(x) = wx + b
     x: (float) - x value of data point
 
     Return:
@@ -34,7 +34,7 @@ def load_data(path: str) -> np.ndarray:
 
     Return:
     np.ndarray
-    Return csv file as a np.ndarray dataframe
+    Return file as a np.ndarray dataframe
     '''
     # Check if path is a string
     if not isinstance(path, str):
@@ -65,7 +65,8 @@ def load_data(path: str) -> np.ndarray:
  does not exist or is a directory")
 
     file = open(path, 'r')
-    w = float(file.readline()[0:-1]); b = float(file.readline())
+    w = float(file.readline()[0:-1])
+    b = float(file.readline())
     # print(file.to_string())
     return w, b
 
@@ -76,7 +77,9 @@ def main():
             raise ValueError(f"{ValueError.__name__}: Wrong number of arguments")
         if not sys.argv[1].isdigit():
             raise ValueError(f"{ValueError.__name__}: Argument must be >= 0")
-        w = 0; b = 0; car_mileage = float(sys.argv[1])
+        w = 0
+        b = 0
+        car_mileage = float(sys.argv[1])
         path = "../train_model/model.txt"
         if os.path.exists(path):
             w, b = load_data(path)

@@ -6,10 +6,10 @@ import numpy as np
 def linear_regression(w: float, b: float, x: float) -> float:
     '''Linear Regression
     Fw,b(x) = wx + b
-    
+
     Args:
-    w: (float) - Slope in Fw,b(x) = wx + b 
-    b: (float) - Y intercept in Fw,b(x) = wx + b 
+    w: (float) - Slope in Fw,b(x) = wx + b
+    b: (float) - Y intercept in Fw,b(x) = wx + b
     x: (float) - x value of data point
 
     Return:
@@ -25,8 +25,8 @@ def calculate_precision(w: float, b: float, x: list[float | int], y: list[float 
     R2 = 1 - SStot/SSres
 
     Args:
-    w: (float) - Slope in Fw,b(x) = wx + b 
-    b: (float) - Y intercept in Fw,b(x) = wx + b 
+    w: (float) - Slope in Fw,b(x) = wx + b
+    b: (float) - Y intercept in Fw,b(x) = wx + b
     x: (list[float | int])	- Price data set
     y: (list[float | int])	- Mileage data set
 
@@ -70,7 +70,7 @@ def load_data(path: str) -> np.ndarray:
     # Check if the path is empty
     if not path.strip():  # Removes trailing spaces
         raise ValueError(f"{ValueError.__name__}: File path is empty")
-    
+
     if not path.endswith(".csv"):
         raise FileNotFoundError(f"{FileNotFoundError.__name__}: '{path}'\
  is not a csv file")
@@ -94,7 +94,7 @@ def load_data(path: str) -> np.ndarray:
     if not os.path.isfile(path):
         raise FileNotFoundError(f"{FileNotFoundError.__name__}: '{path}'\
  does not exist or is a directory")
-    
+
     data_set = pd.read_csv(path)
     # print(data_set.to_string())
     return data_set
@@ -104,14 +104,16 @@ def main():
     path = "../train_model/model.txt"
     if os.path.exists(path):
         model = open(path, 'r')
-        w = float(model.readline()[0:-1]); b = float(model.readline())
+        w = float(model.readline()[0:-1])
+        b = float(model.readline())
     else:
         print(f"1. {path} file doesn't exist")
         return -1
     path = "../../data/data.csv"
     if os.path.exists(path):
         data = load_data(path)
-        x = data['km']; y = data['price']
+        x = data['km']
+        y = data['price']
     else:
         print(f"2. {path} file doesn't exist")
         return -2

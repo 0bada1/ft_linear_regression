@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import os
 
+
 def load_data(path: str) -> np.ndarray:
     '''
     Loads csv file to be read by the machine learning model
@@ -20,7 +21,7 @@ def load_data(path: str) -> np.ndarray:
     # Check if the path is empty
     if not path.strip():  # Removes trailing spaces
         raise ValueError(f"{ValueError.__name__}: File path is empty")
-    
+
     if not path.endswith(".csv"):
         raise FileNotFoundError(f"{FileNotFoundError.__name__}: '{path}'\
  is not a csv file")
@@ -44,7 +45,7 @@ def load_data(path: str) -> np.ndarray:
     if not os.path.isfile(path):
         raise FileNotFoundError(f"{FileNotFoundError.__name__}: '{path}'\
  does not exist or is a directory")
-    
+
     data_set = pd.read_csv(path)
     # print(data_set.to_string())
     return data_set

@@ -20,3 +20,7 @@ b = 375000
 Best fit found from peer:
 w = -0.02123530112566652
 b = 8477.133173873699
+
+Best fit produced by model
+w = -0.021448963591702286
+b = 8499.599649933214
