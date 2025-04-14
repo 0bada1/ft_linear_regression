@@ -26,7 +26,7 @@ m: {len(price_data)}\nalpha(learning rate): {0.01}\nw: {0}\nb: {0}\niterations: 
     b = 0
     alpha = 1.0e-2
     w, b, cost_history, wb_history = gradient_descent(normalized_price_data,
-                                                      normalized_mileage_data, len(price_data), alpha, 0, 0, iterations)
+                                                      normalized_mileage_data, len(price_data), alpha, w, b, iterations)
 
     # Update normalized values to the original values
     # w_original = w_normalized * σx​/σy
@@ -34,6 +34,11 @@ m: {len(price_data)}\nalpha(learning rate): {0.01}\nw: {0}\nb: {0}\niterations: 
 
     # b_original = b_normalized * σy + μy − w_original * μx
     b = (b * np.std(price_data)) + np.mean(price_data) - (w * np.mean(mileage_data))
+
+    # Update wb_history to the correct orginal (not normalized) values
+    for i in range(len(wb_history)):
+        wb_history[i][0] = wb_history[i][0] * (np.std(price_data) / np.std(mileage_data))
+        wb_history[i][1] = (wb_history[i][1] * np.std(price_data)) + np.mean(price_data) - (wb_history[i][0] * np.mean(mileage_data))
 
     coefficients_file = open("model.txt", "w")
     coefficients_file.write(f"{w}\n{b}")
